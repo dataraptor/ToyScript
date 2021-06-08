@@ -1,0 +1,27 @@
+# diamond.toy
+begin  # Draw a diamond on screen
+  
+  n = 17
+  spaces = n-1
+  stars = 1
+  for i=1; i<=n; i=i+1 do
+    for j=1; j<=spaces; j=j+1 do
+      print ' '
+    end
+    for k=1; k<=stars; k=k+1 do
+      print '*'
+    end
+    if spaces>i do
+      spaces = spaces-1
+      stars = stars+2
+    end
+    if spaces<i do
+      spaces = spaces+1
+      stars = stars-2
+    end
+    print endl
+  end
+      
+end    
+
+

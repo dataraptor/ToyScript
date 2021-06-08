@@ -1,0 +1,6 @@
+var1 = 12
+print var1
+var1 = 12+2
+print var1
+var2 = var1+2
+print var2

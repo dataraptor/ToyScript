@@ -1,0 +1,114 @@
+# basic.toy
+begin   # Basic operations with Toy Language
+  
+  print 'Variable Test: ' endl
+  print '----------------------' endl
+  v = 0
+  var1 = 1
+  var2 = 2
+  var3 = 3
+  
+  print 'Value of v: %d' v endl
+  print 'Value of var1: %d' var1 endl
+  print 'Value of var2: %d' var2 endl
+  print 'Value of var3: %d' var3 endl
+  print endl endl
+  
+  
+  
+  print 'If Else Test: ' endl
+  print '----------------------' endl
+  var = 5
+  if var == 5 do
+    print 'Value of var is %d' var endl
+  else do
+    print 'Other' endl
+  end
+  
+  var = 8
+  if var == 5 do
+    print 'Five'
+  else if var == 6 do
+    print 'Six'
+  else if var == 7 do
+    print 'Seven'
+  else if var == 8 do
+    print 'Eight'
+  else if var == 9 do
+    print 'Nine'
+  else if var == 10 do
+    print 'Ten'
+  else do
+    print 'Unknown'
+  end
+  print endl endl endl
+  
+  
+  
+  print 'Loop Test: ' endl
+  print '----------------------' endl
+  
+  x = 20
+    do
+      print '%d ' x
+      x = x - 1
+    while x > 0
+    
+  print endl
+  
+  while x < 21 do
+    print '%d ' x
+      x = x + 1
+    end
+  print endl
+  
+  for x=20; x > 0; x=x-1 do
+    print '%d ' x
+  end
+  
+  print endl endl endl
+  
+  
+  
+  print 'Switch Test: ' endl
+  print '----------------------' endl
+  
+  x = 4
+    switch x
+      case 3
+      print 'Three' endl
+      case 4
+      print 'Four' endl
+      case 5
+      print 'Five' endl
+      case 6
+      print 'Six' endl
+      break
+      case 7
+      print 'Seven' endl
+      case 8
+      print 'Eight' endl
+      default
+      print 'Zero' endl
+    end
+  print endl endl
+  
+  
+  
+  print 'Expression Test: ' endl
+  print '----------------------' endl
+  
+  var1 = 2 + sqrt(16) / 2
+  print '2 + sqrt(16) / 2 = %d ' var1 endl
+  
+  var2 = 12 + 2^4
+  print '12 + 2^4 = %d' var2 endl
+  
+  var3 = 100 % 33
+  print '100 % 33 = %d'var3 endl
+  
+  
+end    
+
+
+

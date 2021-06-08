@@ -1,0 +1,46 @@
+# primes.toy
+begin   # Prime number calculation Example
+
+  n = 315
+  print 'Prime factors of %d: ' n endl
+    
+  while 0 == n % 2 do
+    print '%d ' 2
+    n = n / 2
+  end
+    
+  for i = 3; i <= sqrt(n); i=i+2 do
+    while 0 == n % i do
+      print '%d ' i
+      n = n/i
+    end
+  end
+    
+  if n > 2 do
+    print '%d ' n
+  end
+    
+  print endl endl
+    
+    
+    
+  n = 50
+  print 'Prime numbers from 0 to %d: ' n endl
+    
+  for i = 0; i < n; i=i+1 do
+    flag = 0
+    for j = 2; j <= i/2; j=j+1 do
+      if 0 == i%j do
+        flag = 1
+      end
+    end
+      
+    if flag==0 do
+      print '%d ' i
+    end
+  end
+    
+    
+end    
+
+ 
