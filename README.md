@@ -5,14 +5,54 @@
 # helloworld.toy
 
 begin 	# Hello World program using toy
-  
   # my first program in Toy
-  print 'Hello World' endl  
+  print 'Hello World' endl
   
 end
 ```
 
-## Flow Controll
+## Operators
+#### Arithmetic Operators
+The following table shows all the arithmetic operators supported by the Toy.  
+Assume variable A holds 10 and variable B holds 20 then
+Operator|Description|Example
+------- | --------- | ------
++|Adds two operands.|A + B = 30
+−|Subtracts second operand from the first.|A − B = -10
+*|Multiplies both operands.|A * B = 200
+/|Divides numerator by de-numerator.|B / A = 2
+%|Modulus Operator and remainder of after an integer division.|B % A = 0
+^|Power Operator|2 ^ 4=16
+
+#### Relational Operators
+The following table shows all the relational operators supported by Toy.  
+Assume variable A holds 10 and variable B holds 20 then
+Operator|Description|Example
+------- | --------- | ------
+==|Checks if the values of two operands are equal or not. If yes, then the condition becomes true.|(A == B) is not true.
+!=|Checks if the values of two operands are equal or not. If the values are not equal, then the condition becomes true.|(A != B) is true.
+\> |Checks if the value of left operand is greater than the value of right operand. If yes, then the condition becomes true.|(A \> B) is not true.
+< |Checks if the value of left operand is less than the value of right operand. If yes, then the condition becomes true.|(A < B) is true.
+\>=|Checks if the value of left operand is greater than or equal to the value of right operand. If yes, then the condition becomes true.|(A \>= B) is not true.
+<=|Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true.|(A <= B) is true.
+
+#### Logical Operators
+Following table shows all the logical operators supported by Toy.  
+Assume variable A holds 1 and variable B holds 0, then
+Operator|Description|Example
+------- | --------- | ------
+and|Called Logical AND operator. If both the operands are non-zero, then the condition becomes true.|(A and B) is false.
+or |Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true.|(A or B) is true.
+
+
+## Decision making
+The if-else statement is used to perform the operations based on some specific condition. The operations specified in if block are executed if and only if the given condition is true.  
+There are the following variants of if statement in Toy language.
+1. If statement
+1. If-else statement
+1. If else-if ladder
+1. Nested if  
+
 #### If Statement
 The syntax of the if statement in Toy programming is:
 ```python
@@ -20,7 +60,7 @@ if expression do
     # Code
 end
 ```
-#### If, Else Statement
+#### If...Else Statement
 The syntax of the if statement in Toy programming is:
 ```python
 if expression do
@@ -29,7 +69,7 @@ else
 	# Code
 end
 ```
-#### If, Else If, Else Statement
+#### If...Else If...Else Statement
 The syntax of the if statement in Toy programming is:
 ```python
 if expression do
@@ -55,12 +95,92 @@ begin   # Basic if else statement
   end
 end
 ```
-#### Output:
+##### Output:
 ```
 Six
 ```
+#### Nested If...Else
+```python
+begin 	# Nested if...else example
+  
+  var1 = 12
+  var2 = 14
+  
+  if var1 == var2 do
+    print 'var1 is equal to var2'
+  else do
+    print 'var1 is not equal to var2' endl
+    if var1 > var2 do
+      print 'var1 is greater than var2' endl
+    else do
+      print 'var2 is greater than var1' endl
+    end
+  end
+  
+end
+```
+##### Output:
+```
+var1 is not equal to var2
+var2 is greater than var1
+```
+
+
+#### Switch Statement
+The switch statement allows us to execute one or more code blocks among many alternatives.  
+The syntax of the switch statement in Toy programming is:
+```python
+switch expression
+  case constant1
+    # statements
+	break
+	
+  case constant1
+    # statements
+	break
+  .
+  .
+  .
+  default
+    # default statements
+end
+```
+#### Example
+```python
+x = 4
+switch x
+  case 3
+    print 'Three' endl
+  case 4
+    print 'Four' endl
+  case 5
+    print 'Five' endl
+  case 6
+    print 'Six' endl
+    break
+  case 7
+    print 'Seven' endl
+  case 8
+    print 'Eight' endl
+  default
+    print 'Zero' endl
+end
+```
+##### Output:
+```
+Four
+Five
+Six
+```
+
 
 ## Loop
+In programming, a loop is used to repeat a block of code until the specified condition is met.  
+Toy Language has three types of loops:
+1. for loop
+1. while loop
+1. do...while loop
+
 #### For loop
 The syntax of the if statement in Toy programming is:
 ```python
