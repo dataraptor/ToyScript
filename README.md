@@ -11,6 +11,9 @@ begin 	# Hello World program using toy
 end
 ```
 
+
+<br>
+  
 ## Variables
 In toy currently there is no support for local variable, all variables are global. Local variable support may be available in future revision.
 The syntax for variable declaration in Toy programming is:
@@ -35,7 +38,8 @@ print var2
 16
 ```
 
-
+<br>
+  
 ## Operators
 #### Arithmetic Operators
 The following table shows all the arithmetic operators supported by the Toy.  
@@ -70,6 +74,9 @@ and|Called Logical AND operator. If both the operands are non-zero, then the con
 or |Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true.|(A or B) is true.
 
 
+
+<br>
+  
 ## Decision making
 The if-else statement is used to perform the operations based on some specific condition. The operations specified in if block are executed if and only if the given condition is true.  
 There are the following variants of if statement in Toy language.
@@ -150,7 +157,6 @@ var1 is not equal to var2
 var2 is greater than var1
 ```
 
-
 #### Switch Statement
 The switch statement allows us to execute one or more code blocks among many alternatives.  
 The syntax of the switch statement in Toy programming is:
@@ -199,6 +205,8 @@ Six
 ```
 
 
+<br>
+  
 ## Loop
 In programming, a loop is used to repeat a block of code until the specified condition is met.  
 Toy Language has three types of loops:
@@ -252,6 +260,9 @@ do
 while x >= 0
 ```
 
+
+<br>
+  
 ## Examples of Toy programs
 #### Draw arrow with star in screen
 ```python
