@@ -1,5 +1,75 @@
 # Toy-Interpreter
 
+### Hello World using Toy
+```python
+# helloworld.toy
+
+begin 	# Hello World program using toy
+  
+  # my first program in Toy
+  print 'Hello World' endl  
+  
+end
+```
+
+### Flow Controll
+#### If Statement
+The syntax of the if statement in Toy programming is:
+```python
+if expression do
+    # Code
+end
+```
+#### If, Else Statement
+The syntax of the if statement in Toy programming is:
+```python
+if expression do
+    # Code
+else 
+	# Code
+end
+```
+#### If, Else If, Else Statement
+The syntax of the if statement in Toy programming is:
+```python
+if expression do
+  # Code
+else if expression do
+  # Code
+else 
+  # Code
+end
+```
+#### Example
+```python
+begin   # Basic if else statement
+  var = 6
+  if var == 5 do
+    print 'Five'
+  else if var == 6 do
+    print 'Eight'
+  else if var == 7 do
+    print 'Nine'
+  else do
+    print 'Unknown'
+  end
+end
+```
+#### Output:
+```
+Six
+```
+
+### Loop
+#### For loop
+The syntax of the if statement in Toy programming is:
+```python
+for initializationStatement; testExpression; updateStatement do
+  # statements inside the body of loop
+end
+```
+
+
 ```python
 # arrow.toy
 begin  # Draw an arrow on screen
@@ -27,7 +97,7 @@ begin  # Draw an arrow on screen
 		
 end
 ```
-### Output:
+#### Output:
 
 ```
        ********
@@ -71,7 +141,7 @@ begin   # Prime number calculation Example
   end
 end
 ```
-### Output: 
+#### Output: 
 ```
 Prime factors of 315: 
 3 3 5 7
@@ -97,7 +167,7 @@ begin   # Prime number calculation Example
   end
 end
 ```
-### Output:
+#### Output:
 ```
 Prime numbers from 0 to 50: 
 0 1 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
@@ -124,7 +194,7 @@ begin  # example of fibbonacci
 
 end
 ```
-### Output:
+#### Output:
 ```
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181
 ```
@@ -156,7 +226,7 @@ begin  # Draw a diamond on screen
       
 end   
 ```
-### Output:
+#### Output:
 ```
                 *
                ***
