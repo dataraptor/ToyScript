@@ -11,6 +11,31 @@ begin 	# Hello World program using toy
 end
 ```
 
+## Variables
+In toy currently there is no support for local variable, all variables are global. Local variable support may be available in future revision.
+The syntax for variable declaration in Toy programming is:
+```python
+varname = value
+```
+##### Example:
+```python
+var1 = 12
+print var1
+
+var1 = 12+2
+print var1
+
+var2 = var1+2
+print var2
+```
+##### Output:
+```
+12
+14
+16
+```
+
+
 ## Operators
 #### Arithmetic Operators
 The following table shows all the arithmetic operators supported by the Toy.  
@@ -227,7 +252,8 @@ do
 while x >= 0
 ```
 
-
+## Examples of Toy programs
+#### Draw arrow with star in screen
 ```python
 # arrow.toy
 begin  # Draw an arrow on screen
@@ -255,7 +281,7 @@ begin  # Draw an arrow on screen
 		
 end
 ```
-#### Output:
+##### Output:
 
 ```
        ********
@@ -275,6 +301,7 @@ end
        *******
 ```
 
+#### Find all prime factors of a given number
 ```python
 # primes.toy
 begin   # Prime number calculation Example
@@ -299,12 +326,13 @@ begin   # Prime number calculation Example
   end
 end
 ```
-#### Output: 
+##### Output: 
 ```
 Prime factors of 315: 
 3 3 5 7
 ```
 
+#### Find all prime numbers within a given range
 ```python
 # primes.toy
 begin   # Prime number calculation Example
@@ -325,12 +353,14 @@ begin   # Prime number calculation Example
   end
 end
 ```
-#### Output:
+##### Output:
 ```
 Prime numbers from 0 to 50: 
 0 1 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
 ```
 
+
+#### Print Fibonacci series
 ```python
 # fibo.toy
 begin  # example of fibbonacci
@@ -352,11 +382,12 @@ begin  # example of fibbonacci
 
 end
 ```
-#### Output:
+##### Output:
 ```
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181
 ```
 
+#### Draw a diamond on screen
 ```python
 # diamond.toy
 begin  # Draw a diamond on screen
@@ -384,7 +415,7 @@ begin  # Draw a diamond on screen
       
 end   
 ```
-#### Output:
+##### Output:
 ```
                 *
                ***
