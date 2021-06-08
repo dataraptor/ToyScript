@@ -1,4 +1,20 @@
-# Toy-Interpreter
+# The Toy Language
+The Toy Language is an easy to use and easy to learn general purpose high level programming language. It is developed using flex and bison and has basic features to solve basic and mid level problems.
+
+
+## Commandline Usage
+The following command was used to build the compiler 
+```
+bison -d toy.y && flex toy.l && gcc toy.tab.c lex.yy.c -lm -o toy
+```
+Use the following command to compile and run a program with Toy Compiler
+```
+./toy prog.toy
+```
+
+
+
+<br>
 
 ## Hello World using Toy
 ```python
@@ -13,7 +29,7 @@ end
 
 
 <br>
-  
+
 ## Variables
 In toy currently there is no support for local variable, all variables are global. Local variable support may be available in future revision.
 The syntax for variable declaration in Toy programming is:
@@ -76,7 +92,18 @@ or |Called Logical OR Operator. If any of the two operands is non-zero, then the
 
 
 <br>
-  
+
+## Comment
+Syntax for the single line comment is
+```python
+# comment
+```
+multiline comment is not supported yet
+
+
+
+<br>
+
 ## Decision making
 The if-else statement is used to perform the operations based on some specific condition. The operations specified in if block are executed if and only if the given condition is true.  
 There are the following variants of if statement in Toy language.
@@ -89,26 +116,26 @@ There are the following variants of if statement in Toy language.
 The syntax of the if statement in Toy programming is:
 ```python
 if expression do
-    # Code
+  # Code
 end
 ```
 #### If...Else Statement
-The syntax of the if statement in Toy programming is:
+The syntax of the if...else statement in Toy programming is:
 ```python
 if expression do
-    # Code
-else 
-	# Code
+  # Code
+else do
+  # Code
 end
 ```
 #### If...Else If...Else Statement
-The syntax of the if statement in Toy programming is:
+The syntax of the if...else if...else statement in Toy programming is:
 ```python
 if expression do
   # Code
 else if expression do
   # Code
-else 
+else do
   # Code
 end
 ```
@@ -132,6 +159,7 @@ end
 Six
 ```
 #### Nested If...Else
+Example of nested if...else statement
 ```python
 begin 	# Nested if...else example
   
@@ -215,7 +243,7 @@ Toy Language has three types of loops:
 1. do...while loop
 
 #### For loop
-The syntax of the if statement in Toy programming is:
+The syntax of the for loop in Toy programming is:
 ```python
 for initializationStatement; testExpression; updateStatement do
   # statements inside the body of loop
@@ -229,7 +257,7 @@ end
 ```
 
 #### While loop
-The syntax of the if statement in Toy programming is:
+The syntax of the while loop in Toy programming is:
 ```python
 while testExpression do 
     # the body of the loop 
@@ -245,7 +273,7 @@ end
 ```
 
 #### Do While loop
-The syntax of the if statement in Toy programming is:
+The syntax of the do while loop in Toy programming is:
 ```python
 do 
   # the body of the loop 
@@ -263,8 +291,9 @@ while x >= 0
 
 <br>
   
-## Examples of Toy programs
-#### Draw arrow with star in screen
+## Examples of Toy program
+The following Toy program was compiled using Toy Compiler and the output was copied from the terminal after successfull execution of the program
+#### Example 1: Draw arrow in screen
 ```python
 # arrow.toy
 begin  # Draw an arrow on screen
@@ -312,7 +341,7 @@ end
        *******
 ```
 
-#### Find all prime factors of a given number
+#### Example 2: Find all prime factors of a given number
 ```python
 # primes.toy
 begin   # Prime number calculation Example
@@ -343,7 +372,7 @@ Prime factors of 315:
 3 3 5 7
 ```
 
-#### Find all prime numbers within a given range
+#### Example 3: Find all prime numbers within a given range
 ```python
 # primes.toy
 begin   # Prime number calculation Example
@@ -371,7 +400,7 @@ Prime numbers from 0 to 50:
 ```
 
 
-#### Print Fibonacci series
+#### Example 4: Print Fibonacci series
 ```python
 # fibo.toy
 begin  # example of fibbonacci
@@ -398,7 +427,7 @@ end
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181
 ```
 
-#### Draw a diamond on screen
+#### Example 5: Draw a diamond on screen
 ```python
 # diamond.toy
 begin  # Draw a diamond on screen
