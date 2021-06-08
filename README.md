@@ -94,11 +94,11 @@ or |Called Logical OR Operator. If any of the two operands is non-zero, then the
 <br>
 
 ## Comment
-Syntax for the single line comment is
+Syntax for the single line comment is:
 ```python
 # comment
 ```
-multiline comment is not supported yet
+Multiline comment is not supported yet
 
 
 
@@ -139,7 +139,7 @@ else do
   # Code
 end
 ```
-#### Example
+##### Example:
 ```python
 begin   # Basic if else statement
   var = 6
@@ -159,7 +159,7 @@ end
 Six
 ```
 #### Nested If...Else
-Example of nested if...else statement
+Example of nested if...else statement:
 ```python
 begin 	# Nested if...else example
   
@@ -192,11 +192,11 @@ The syntax of the switch statement in Toy programming is:
 switch expression
   case constant1
     # statements
-	break
+    break
 	
   case constant1
     # statements
-	break
+    break
   .
   .
   .
@@ -204,7 +204,7 @@ switch expression
     # default statements
 end
 ```
-#### Example
+##### Example:
 ```python
 x = 4
 switch x
@@ -249,7 +249,7 @@ for initializationStatement; testExpression; updateStatement do
   # statements inside the body of loop
 end
 ```
-#### Example
+##### Example:
 ```python
 for x=20; x > 0; x=x-1 do
   print '%d ' x
@@ -263,7 +263,7 @@ while testExpression do
     # the body of the loop 
 end
 ```
-#### Example
+##### Example
 ```python
 x = 0
 while x <= 20 do
@@ -279,7 +279,7 @@ do
   # the body of the loop 
 while testExpression
 ```
-#### Example
+##### Example:
 ```python
 x = 20
 do
