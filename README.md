@@ -1,6 +1,6 @@
 # Toy-Interpreter
 
-### Hello World using Toy
+## Hello World using Toy
 ```python
 # helloworld.toy
 
@@ -12,7 +12,7 @@ begin 	# Hello World program using toy
 end
 ```
 
-### Flow Controll
+## Flow Controll
 #### If Statement
 The syntax of the if statement in Toy programming is:
 ```python
@@ -60,13 +60,51 @@ end
 Six
 ```
 
-### Loop
+## Loop
 #### For loop
 The syntax of the if statement in Toy programming is:
 ```python
 for initializationStatement; testExpression; updateStatement do
   # statements inside the body of loop
 end
+```
+#### Example
+```python
+for x=20; x > 0; x=x-1 do
+  print '%d ' x
+end
+```
+
+#### While loop
+The syntax of the if statement in Toy programming is:
+```python
+while testExpression do 
+    # the body of the loop 
+end
+```
+#### Example
+```python
+x = 0
+while x <= 20 do
+  print '%d ' x
+  x = x + 1
+end
+```
+
+#### Do While loop
+The syntax of the if statement in Toy programming is:
+```python
+do 
+  # the body of the loop 
+while testExpression
+```
+#### Example
+```python
+x = 20
+do
+  print '%d ' x
+  x = x - 1
+while x >= 0
 ```
 
 
