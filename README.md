@@ -67,7 +67,7 @@ Operator|Description|Example
 *|Multiplies both operands.|A * B = 200
 /|Divides numerator by de-numerator.|B / A = 2
 %|Modulus Operator and remainder of after an integer division.|B % A = 0
-^|Power Operator|2 ^ 4=16
+^|Power Operator|2 ^ 4 = 16
 
 #### Relational Operators
 The following table shows all the relational operators supported by Toy.  
