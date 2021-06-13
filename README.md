@@ -60,6 +60,7 @@ Parser is a program that is used to break the data into smaller elements coming 
 
 Project Overview
 ================
+In this project a fully functional toy programming language has been developed. The main gole of this project is to make programming language as simple as possible. The syntax of toy is much closer to English language so anyone can easily understand programs written in toy language. Toy programs are easy to read and write. This would be very useful for students who wants to learn programming.
 
 
 
