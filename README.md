@@ -1,8 +1,36 @@
-# The Toy Language
+Table of contents
+=================
+
+<!--ts-->
+   * [Introduction](#introduction)
+   * [The Parser](#the-parser)
+   * [The Scanner](#the-scanner)
+   * [Commandline Usage](#commandline-Usage)
+   * [Simple Hello World Program](#hello-world-using-toy)
+   * [Features](#usage)
+      * [STDIN](#stdin)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+      * [Auto insert and update TOC](#auto-insert-and-update-toc)
+      * [GitHub token](#github-token)
+      * [TOC generation with Github Actions](#toc-generation-with-github-actions)
+   * [Tests](#tests)
+   * [Dependency](#dependency)
+   * [Docker](#docker)
+     * [Local](#local)
+     * [Public](#public)
+<!--te-->
+
+
+Introduction
+============
 The Toy Language is an easy to use and easy to learn general purpose high level programming language. It is developed using flex and bison and has basic features to solve basic and mid level problems.
 
 
-## Commandline Usage
+Commandline Usage
+=================
 The following command was used to build the compiler 
 ```
 bison -d toy.y && flex toy.l && gcc toy.tab.c lex.yy.c -lm -o toy
@@ -16,7 +44,8 @@ Use the following command to compile and run a program with Toy Compiler
 
 <br>
 
-## Hello World using Toy
+Hello World using Toy
+=====================
 ```python
 # helloworld.toy
 
@@ -55,7 +84,7 @@ print var2
 ```
 
 <br>
-  
+
 ## Operators
 #### Arithmetic Operators
 The following table shows all the arithmetic operators supported by the Toy.  
