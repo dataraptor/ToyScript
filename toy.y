@@ -21,18 +21,20 @@ struct AstElement
     		ekId = 0,
     		ekNumber = 1,
     		ekBinExpression = 2,
-    		ekCall = 3,
+    		ekPrefixUnaryExpression = 3,
+    		ekPostfixUnaryExpression = 4,
+    		ekCall = 5,
     		
-    		ekAssignment = 4,
-    		ekIf = 5,
-    		ekSwitch = 6,
-    		ekFor = 7,
-    		ekWhile = 8,
-    		ekDoWhile = 9,
+    		ekAssignment = 6,
+    		ekIf = 7,
+    		ekSwitch = 8,
+    		ekFor = 9,
+    		ekWhile = 10,
+    		ekDoWhile = 11,
     		
-    		ekPrint = 10,
-    		ekStatements = 11,
-    		ekLastElement = 12,
+    		ekPrint = 12,
+    		ekStatements = 13,
+    		ekLastElement = 14,
     		
     		ekElseIf = 201,
     		ekElse = 202,
@@ -107,6 +109,8 @@ struct AstElement* makeAssignment(char*name, struct AstElement* val);
 struct AstElement* makeExpByNum(int val);
 struct AstElement* makeExpByName(char*name);
 struct AstElement* makeExp(struct AstElement* left, struct AstElement* right, char op);
+struct AstElement* makePrefixUnaryOp(char*name, char op);
+struct AstElement* makePostfixUnaryOp(char*name, char op);
 struct AstElement* makeStatement(struct AstElement* dest, struct AstElement* toAppend);
 struct AstElement* makeFor(struct AstElement* init, struct AstElement* cond, struct AstElement* post, struct AstElement* exec);
 struct AstElement* makeWhile(struct AstElement* cond, struct AstElement* exec);
@@ -157,6 +161,22 @@ struct AstElement* makeExp(struct AstElement* left, struct AstElement* right, ch
     result->kind = ekBinExpression;
     result->data.expression.left = left;
     result->data.expression.right = right;
+    result->data.expression.op = op;
+    return result;
+}
+
+struct AstElement* makePrefixUnaryOp(char*name, char op) {
+    struct AstElement* result = checkAlloc(sizeof(*result));
+    result->kind = ekPrefixUnaryExpression;
+    result->data.name = name;
+    result->data.expression.op = op;
+    return result;
+}
+
+struct AstElement* makePostfixUnaryOp(char*name, char op) {
+    struct AstElement* result = checkAlloc(sizeof(*result));
+    result->kind = ekPostfixUnaryExpression;
+    result->data.name = name;
     result->data.expression.op = op;
     return result;
 }
@@ -418,6 +438,8 @@ static void execSetValue(struct ExecEnviron* e, const char *varname, int value) 
 
 static int execTermExpression(struct ExecEnviron* e, struct AstElement* a);
 static int execBinExp(struct ExecEnviron* e, struct AstElement* a);
+static int execUnaryPreExp(struct ExecEnviron* e, struct AstElement* a);
+static int execUnaryPostExp(struct ExecEnviron* e, struct AstElement* a);
 static int execCall(struct ExecEnviron* e, struct AstElement* a);
 static void execAssign(struct ExecEnviron* e, struct AstElement* a);
 static void execWhile(struct ExecEnviron* e, struct AstElement* a);
@@ -433,6 +455,8 @@ static int(*valExecs[])(struct ExecEnviron* e, struct AstElement* a) = {
     execTermExpression,
     execTermExpression,
     execBinExp,
+    execUnaryPreExp,
+    execUnaryPostExp,
     execCall,
     NULL,
     NULL,
@@ -449,6 +473,8 @@ static void(*runExecs[])(struct ExecEnviron* e, struct AstElement* a) = {
     NULL, /* ID and numbers are canonical and */
     NULL, /* don't need to be executed */
     NULL, /* a binary expression is not executed */
+    NULL,
+    NULL,
     NULL,
     execAssign,
     execIf,
@@ -551,6 +577,51 @@ static int execBinExp(struct ExecEnviron* e, struct AstElement* a) {
             exit(1);
     }
     /* no return here, since every switch case returns some value (or bails out) */
+}
+
+static int execUnaryPreExp(struct ExecEnviron* e, struct AstElement* a) {
+    assert(ekPrefixUnaryExpression == a->kind);
+    
+    int val = execGetValue(e, a->data.name);
+    switch(a->data.expression.op) {
+        case 'p':
+            val=val+1;
+            break;
+        case 'm':
+            val = val-1;
+            break;
+        case 'n':
+            val = !val;
+            break;
+        default:
+            fprintf(stderr,  "OOPS: Unknown operator:%c\n", a->data.expression.op);
+            exit(1);
+    }
+    
+    execSetValue(e, a->data.name, val);
+    return val;
+}
+
+static int execUnaryPostExp(struct ExecEnviron* e, struct AstElement* a) {
+    assert(ekPostfixUnaryExpression == a->kind);
+    
+    int val = execGetValue(e, a->data.name);
+    int val_last = val;
+    
+    switch(a->data.expression.op) {
+        case 'p':
+            val=val+1;
+            break;
+        case 'm':
+            val=val-1;
+            break;
+        default:
+            fprintf(stderr,  "OOPS: Unknown operator:%c\n", a->data.expression.op);
+            exit(1);
+    }
+    
+    execSetValue(e, a->data.name, val);
+    return val_last;
 }
 
 
@@ -741,7 +812,7 @@ void freeEnv(struct ExecEnviron* e) {
 %token TOKEN_BEGIN TOKEN_END TOKEN_WHILE TOKEN_IF TOKEN_ELSE TOKEN_DO TOKEN_FOR TOKEN_SWITCH TOKEN_CASE TOKEN_BREAK TOKEN_DEFAULT TOKEN_PRINT TOKEN_NEWLINE TOKEN_EOF TOKEN_ENDLINE
 %token<name> TOKEN_ID TOKEN_STRING
 %token<val> TOKEN_NUMBER
-%token<op> TOKEN_OPERATOR
+%token<op> TOKEN_OPERATOR TOKEN_UNARY_OPERATOR
 %type<val> endline ignoreNL
 %type<ast> program block statements statement assignment expression forStmt whileStmt dowhileStmt ifStmt elseifStmt elseStmt switchStmt caseStmt defaultStmt call printStmt
 %start program
@@ -764,7 +835,7 @@ statements: {$$=0;}
     | statements TOKEN_NEWLINE {$$=$1;}
     ;
 
-statement: 
+statement:
       assignment {$$=$1;}
     | forStmt {$$=$1;}
     | whileStmt {$$=$1;}
@@ -778,6 +849,8 @@ statement:
 assignment: TOKEN_ID '=' expression {$$=makeAssignment($1, $3);};
 
 expression: expression TOKEN_OPERATOR expression {$$=makeExp($1, $3, $2);}
+    | TOKEN_ID TOKEN_UNARY_OPERATOR {$$=makePostfixUnaryOp($1, $2);}
+    | TOKEN_UNARY_OPERATOR TOKEN_ID {$$=makePrefixUnaryOp($2, $1);}
     | TOKEN_NUMBER {$$=makeExpByNum($1);}
     | TOKEN_ID {$$=makeExpByName($1);}
     | call {$$=$1;}
@@ -846,5 +919,4 @@ int main(int argc, char **argv) {
     freeEnv(e);
     /* TODO: destroy the AST */
 }
-
 
