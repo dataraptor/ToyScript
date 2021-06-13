@@ -28,8 +28,11 @@
 "=="		 {yylval.op = '$'; return TOKEN_OPERATOR;}
 "!="     {yylval.op = 'n'; return TOKEN_OPERATOR;}
 
-"default" return TOKEN_DEFAULT;
+"++"     {yylval.op = 'p'; return TOKEN_UNARY_OPERATOR;}
+"--"     {yylval.op = 'm'; return TOKEN_UNARY_OPERATOR;}
+"!"      {yylval.op = 'n'; return TOKEN_UNARY_OPERATOR;}
 
+"default" return TOKEN_DEFAULT;
 [\n]		  return TOKEN_NEWLINE;
 
 
@@ -48,5 +51,4 @@
 [*/+-<>^%]  {yylval.op = *yytext; return TOKEN_OPERATOR;}
 [ \t\n]    {/* suppress the output of the whitespaces from the input file to stdout */}
 #.*        {/* one-line comment */}
-
 
