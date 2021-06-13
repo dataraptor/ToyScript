@@ -3,23 +3,20 @@ Table of contents
 
 <!--ts-->
    * [Introduction](#introduction)
+   * [Commandline Usage](#commandline-usage)
    * [The Parser](#the-parser)
    * [The Scanner](#the-scanner)
    * [Project Overview](#project-overview)
    * [Token Generation](#token-generation)
-   * [Commandline Usage](#commandline-Usage)
    * [Simple Hello World Program](#hello-world-using-toy)
    * [Language Documentation](#documentation)
+      * [Variable Declaration](#variable-declaration)
       * [Operators](#stdin)
-      * [Arithmetic Operators](#arithmatic-operators)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-      * [Auto insert and update TOC](#auto-insert-and-update-toc)
-      * [GitHub token](#github-token)
-      * [TOC generation with Github Actions](#toc-generation-with-github-actions)
-	
+      * [Printing on Screen](#printing-on-screen)
+      * [Decision Making](#decision-making)
+      * [Loop](#loop)
+      * [Examples](#example-programs)
+   * [References](#references)
 <!--te-->
 
 
@@ -38,6 +35,29 @@ Use the following command to compile and run a program with Toy Compiler
 ```
 ./toy prog.toy
 ```
+
+<br>
+
+The Parser
+==========
+
+
+<br>
+
+The Scanner
+===========
+
+
+<br>
+
+Project Overview
+================
+
+
+<br>
+
+Token Generation
+================
 
 
 
@@ -58,7 +78,8 @@ end
 
 <br>
 
-## Variables
+Variable Declaration
+====================
 In toy currently there is no support for local variable, all variables are global. Local variable support may be available in future revision.
 The syntax for variable declaration in Toy programming is:
 ```python
@@ -84,7 +105,8 @@ print var2
 
 <br>
 
-## Operators
+Operators
+=========
 #### Arithmetic Operators
 The following table shows all the arithmetic operators supported by the Toy.  
 Assume variable A holds 10 and variable B holds 20 then
@@ -121,7 +143,15 @@ or |Called Logical OR Operator. If any of the two operands is non-zero, then the
 
 <br>
 
-## Comment
+Printing on Screen
+==================
+
+
+
+<br>
+
+Comment
+=======
 Syntax for the single line comment is:
 ```python
 # comment
@@ -132,7 +162,8 @@ Multiline comment is not supported yet
 
 <br>
 
-## Decision making
+Decision Making
+===============
 The if-else statement is used to perform the operations based on some specific condition. The operations specified in if block are executed if and only if the given condition is true.  
 There are the following variants of if statement in Toy language.
 1. If statement
@@ -263,7 +294,8 @@ Six
 
 <br>
   
-## Loop
+Loop
+====
 In programming, a loop is used to repeat a block of code until the specified condition is met.  
 Toy Language has three types of loops:
 1. for loop
@@ -319,7 +351,8 @@ while x >= 0
 
 <br>
   
-## Examples of Toy program
+Example Programs
+================
 The following Toy program was compiled using Toy Compiler and the output was copied from the terminal after successfull execution of the program
 #### Example 1: Draw arrow in screen
 ```python
@@ -503,3 +536,12 @@ end
                ***
                 *
 ```
+
+
+<br>
+
+References
+==========
+
+
+
