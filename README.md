@@ -160,7 +160,40 @@ A--|-- as a postfix operator will return A's value first, then decrements A's va
 
 Printing on Screen
 ==================
+#### Printing a variable's value on screen
+```python
+var1 = 12
+print var1
+```
+##### Output
+```
+12
+```
 
+#### Printing formatted string on screen
+```python
+var1 = 34
+print 'Hello World %d' var1
+```
+##### Output
+```
+Hello World 34
+```
+
+#### Printing New Line on screen
+```python
+print 'Hello' endl
+print 'World'
+print endl endl
+print 'Test'
+```
+##### Output
+```
+Hello
+World
+
+Test
+```
 
 
 <br>
@@ -171,7 +204,6 @@ Syntax for the single line comment is:
 ```python
 # comment
 ```
-Multiline comment is not supported yet
 
 
 
@@ -557,6 +589,7 @@ end
 
 References
 ==========
-
-
-
+1. https://stackoverflow.com/questions/11894326/what-is-an-abstract-syntax-tree-is-it-needed
+2. https://softwareengineering.stackexchange.com/questions/254074/how-exactly-is-an-abstract-syntax-tree-created
+3. https://github.com/AkshayGogeri/If-Else-Compiler-in-C
+4. https://stackoverflow.com/questions/2644597/how-do-i-implement-if-statement-in-flex-bison
