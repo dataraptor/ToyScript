@@ -20,10 +20,14 @@ Table of contents
 <!--te-->
 
 
+<br>
+
 Introduction
 ============
 The Toy Language is an easy to use and easy to learn general purpose high level programming language. It is developed using flex and bison and has basic features to solve basic and mid level problems.
 
+
+<br>
 
 Commandline Usage
 =================
