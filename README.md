@@ -11,7 +11,7 @@ Table of contents
    * [Simple Hello World Program](#hello-world-using-toy)
    * [Language Documentation](#documentation)
       * [Variable Declaration](#variable-declaration)
-      * [Operators](#stdin)
+      * [Operators](#operators)
       * [Printing on Screen](#printing-on-screen)
       * [Decision Making](#decision-making)
       * [Loop](#loop)
@@ -142,6 +142,17 @@ Operator|Description|Example
 ------- | --------- | ------
 and|Called Logical AND operator. If both the operands are non-zero, then the condition becomes true.|(A and B) is false.
 or |Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true.|(A or B) is true.
+not|Called Logical Not Operator. It inverts the logical value.|not A is false
+
+#### Unary Operators
+Following table shows all the unary operators supported by Toy.  
+Assume variable A holds 4 and variable B holds 6, then
+Operator|Description|Example
+------- | --------- | ------
+A++|++ as a postfix operator will return A's value first, then increments A's value by one.|B=A++, then B=4, A=5.
+A--|-- as a postfix operator will return A's value first, then decrements A's value by one.|B=A--, then B=4, A=3.
+++A|++ as a prefix operator will increments A's value by one, then returns A's value.|B=++A, then B=5, A=5.
+--A|-- as a prefix operator will increments A's value by one, then returns A's value.|B=--A, then B=3, A=3.
 
 
 
