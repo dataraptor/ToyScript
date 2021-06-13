@@ -40,22 +40,27 @@ Use the following command to compile and run a program with Toy Compiler
 ./toy prog.toy
 ```
 
-<br>
-
-The Parser
-==========
-
 
 <br>
 
-The Scanner
+The Scanner (Flex)
 ===========
+Scanning, lexing or tokenization is the process of converting a sequence of characters (such as in a computer program or web page) into a sequence of tokens (strings with an assigned and thus identified meaning). A program that performs lexical analysis may be termed a scanner, lexer, tokenizer. In this project FLEX(fast lexical analyzer generator) is used as lexical analyzer.
+
+
+
+<br>
+
+The Parser (Bison)
+==========
+Parser is a program that is used to break the data into smaller elements coming from lexical analysis phase. A parser takes input in the form of sequence of tokens and produces output in the form of parse tree. In this project Bison is used as the parser. Bison reads a specification of a context-free language, warns about any parsing ambiguities, and generates a parser (either in C, C++, or Java) that reads sequences of tokens and decides whether the sequence conforms to the syntax specified by the grammar. The generated parsers are portable: they do not require any specific compilers.
 
 
 <br>
 
 Project Overview
 ================
+
 
 
 <br>
@@ -589,7 +594,11 @@ end
 
 References
 ==========
-1. https://stackoverflow.com/questions/11894326/what-is-an-abstract-syntax-tree-is-it-needed
-2. https://softwareengineering.stackexchange.com/questions/254074/how-exactly-is-an-abstract-syntax-tree-created
-3. https://github.com/AkshayGogeri/If-Else-Compiler-in-C
-4. https://stackoverflow.com/questions/2644597/how-do-i-implement-if-statement-in-flex-bison
+1. https://en.wikipedia.org/wiki/Lexical_analysis
+2. https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator)
+3. https://www.javatpoint.com/parser
+4. https://en.wikipedia.org/wiki/GNU_Bison
+6. https://stackoverflow.com/questions/11894326/what-is-an-abstract-syntax-tree-is-it-needed
+7. https://softwareengineering.stackexchange.com/questions/254074/how-exactly-is-an-abstract-syntax-tree-created
+8. https://github.com/AkshayGogeri/If-Else-Compiler-in-C
+9. https://stackoverflow.com/questions/2644597/how-do-i-implement-if-statement-in-flex-bison
