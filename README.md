@@ -68,6 +68,7 @@ The Toy compiler first take a Toy Program and it creates a sequence of tokens th
 
 Token Generation
 ================
+The following flex rules has been used to generate tokens from a toy program.
 ```c
 "if"     return TOKEN_IF;
 "else"	 return TOKEN_ELSE;
