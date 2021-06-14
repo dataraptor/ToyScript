@@ -1,24 +1,31 @@
-Table of contents
-=================
+Compiler Project
+================
+### Course No: CSE 3212
+### Course Title: Compiler Design Laboratory
 
-<!--ts-->
-   * [Introduction](#introduction)
-   * [Commandline Usage](#commandline-usage)
-   * [The Parser](#the-parser)
-   * [The Scanner](#the-scanner)
-   * [Project Overview](#project-overview)
-   * [Token Generation](#token-generation)
-   * [Simple Hello World Program](#hello-world-using-toy)
-   * [Language Documentation](#documentation)
-      * [Variable Declaration](#variable-declaration)
-      * [Operators](#operators)
-      * [Printing on Screen](#printing-on-screen)
-      * [Decision Making](#decision-making)
-      * [Loop](#loop)
-      * [Examples](#example-programs)
-   * [References](#references)
-<!--te-->
+<br>  
 
+#### Submitted to:
+Dola Das  
+Lecturer  
+Department of Computer Science and Engineering  
+Khulna University of Engineering & Technology, Khulna  
+
+Md. Ahsan Habib Nayan  
+Lecturer  
+Department of Computer Science and Engineering  
+Khulna University of Engineering & Technology, Khulna  
+
+
+#### Submitted by:  
+Shamim Ahamed  
+Roll: 1707028  
+Department of Computer Science and Engineering  
+Khulna University of Engineering & Technology, Khulna  
+
+Submission Date: 15.6.2021  
+
+<br>  
 
 <br>
 
@@ -43,14 +50,14 @@ Use the following command to compile and run a program with Toy Compiler
 
 <br>
 
-The Scanner (Flex)
+The Scanner
 ===========
 Scanning, lexing or tokenization is the process of converting a sequence of characters (such as in a computer program or web page) into a sequence of tokens (strings with an assigned and thus identified meaning). A program that performs lexical analysis may be termed a scanner, lexer, tokenizer. In this project FLEX(fast lexical analyzer generator) is used as lexical analyzer.
 
 
 <br>
 
-The Parser (Bison)
+The Parser
 ==========
 Parser is a program that is used to break the data into smaller elements coming from lexical analysis phase. A parser takes input in the form of sequence of tokens and produces output in the form of parse tree. In this project Bison is used as the parser. Bison reads a specification of a context-free language, warns about any parsing ambiguities, and generates a parser (either in C, C++, or Java) that reads sequences of tokens and decides whether the sequence conforms to the syntax specified by the grammar. The generated parsers are portable: they do not require any specific compilers.
 
