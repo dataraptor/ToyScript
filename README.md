@@ -118,7 +118,7 @@ The following flex rules has been used to generate tokens from a toy program.
 [0-9]+     {yylval.val = atoi(yytext); return TOKEN_NUMBER;}
 [()=:;]    {return *yytext;}
 [*/+-<>^%] {yylval.op = *yytext; return TOKEN_OPERATOR;}
-[ \t\n]    {/* suppress the output of the whitespaces from the input file to stdout */}
+[ \t\n]    { }
 #.*        {/* one-line comment */}
 
 ```
@@ -143,7 +143,7 @@ end
 
 Variable Declaration
 ====================
-In toy currently there is no support for local variable, all variables are global. Local variable support may be available in future revision.
+In toy all variables are global. Local variable support may be available in future revision.
 The syntax for variable declaration in Toy programming is:
 ```python
 varname = value
