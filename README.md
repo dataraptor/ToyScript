@@ -31,7 +31,7 @@ Submission Date: 15.6.2021
 
 Introduction
 ============
-The Toy Language is an easy to use and easy to learn general purpose high level programming language. It is developed using flex and bison and has basic features to solve basic and mid level problems.
+In this project a simple toy programming language has been developed. The Language is an easy to use and easy to learn general purpose high level programming language. It is developed using flex and bison and has basic features to solve basic and mid level problems.
 
 
 <br>
