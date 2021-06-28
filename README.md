@@ -1,31 +1,5 @@
-Compiler Project
+ToyLang
 ================
-### Course No: CSE 3212
-### Course Title: Compiler Design Laboratory
-
-<br>  
-
-#### Submitted to:
-Dola Das  
-Lecturer  
-Department of Computer Science and Engineering  
-Khulna University of Engineering & Technology, Khulna  
-
-Md. Ahsan Habib Nayan  
-Lecturer  
-Department of Computer Science and Engineering  
-Khulna University of Engineering & Technology, Khulna  
-
-
-#### Submitted by:  
-Shamim Ahamed  
-Roll: 1707028  
-Department of Computer Science and Engineering  
-Khulna University of Engineering & Technology, Khulna  
-
-Submission Date: 15.6.2021  
-
-<br>  
 
 <br>
 
