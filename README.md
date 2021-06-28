@@ -1,5 +1,28 @@
 ToyLang
 ================
+A simple programming language
+
+
+Table of contents
+=================
+
+<!--ts-->
+   * [Introduction](#introduction)
+   * [Commandline Usage](#commandline-usage)
+   * [The Parser](#the-parser)
+   * [The Scanner](#the-scanner)
+   * [Project Overview](#project-overview)
+   * [Token Generation](#token-generation)
+   * [Simple Hello World Program](#hello-world-using-toy)
+   * [Language Documentation](#documentation)
+      * [Variable Declaration](#variable-declaration)
+      * [Operators](#operators)
+      * [Printing on Screen](#printing-on-screen)
+      * [Decision Making](#decision-making)
+      * [Loop](#loop)
+      * [Examples](#example-programs)
+   * [References](#references)
+<!--te-->
 
 <br>
 
