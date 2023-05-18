@@ -12,6 +12,8 @@ To compile and run ToyScript programs, use the provided command-line usage guide
 
 Explore ToyScript, have fun coding, and let your creativity flow!
 
+License: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+
 ![](images/toy.jpg?raw=true)
 
 Table of contents
