@@ -1,6 +1,6 @@
-ToyScript
+ToyScript: Developing an Interpreter from Scratch
 ================
-A simple programming language along with an Interpreter
+
 
 
 Table of contents
