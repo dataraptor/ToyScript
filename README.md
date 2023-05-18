@@ -1,6 +1,16 @@
 ToyScript: Developing an Interpreter from Scratch
 ================
+ToyScript is a simple and easy-to-learn programming language developed as a fun project. The main goal of ToyScript is to provide a beginner-friendly programming language that closely resembles the English language, making it accessible and intuitive for beginners to learn programming concepts.
 
+The ToyScript compiler is built using flex and bison, which are powerful tools for lexical analysis and parsing. It generates tokens from ToyScript programs and matches them with predefined context-free grammars to create an Abstract Syntax Tree (AST). The AST can then be executed using an interpreter.
+
+ToyScript supports basic programming features such as variable declaration, arithmetic and logical operators, decision making (if-else statements, switch-case statements), loops (for, while, do-while), and printing output on the screen. It also provides simple examples and documentation to help users get started quickly.
+
+This project is ideal for students and programming enthusiasts who want to explore the fundamentals of programming languages and gain hands-on experience. Feel free to contribute to the project and experiment with the language to add more functionality and features.
+
+To compile and run ToyScript programs, use the provided command-line usage guide. The project also includes a scanner and parser implementation, enabling you to understand the underlying process of lexical analysis and parsing in programming languages.
+
+Explore ToyScript, have fun coding, and let your creativity flow!
 
 
 Table of contents
