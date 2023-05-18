@@ -1,6 +1,6 @@
-ToyLang
+ToyScript
 ================
-A simple programming language
+A simple programming language along with an Interpreter
 
 
 Table of contents
