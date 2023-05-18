@@ -12,6 +12,7 @@ To compile and run ToyScript programs, use the provided command-line usage guide
 
 Explore ToyScript, have fun coding, and let your creativity flow!
 
+![](images/toy.jpg?raw=true)
 
 Table of contents
 =================
